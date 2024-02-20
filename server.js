@@ -35,7 +35,7 @@ app.get("/books", authenToken, (req, res) => {
 
 function authenToken(req, res, next) {
   const authorizationHeader = req.headers["authorization"];
-  // Header: 'Beaer [token]'
+  // Header: 'Bearer [token]'
   const token = authorizationHeader.split(" ")[1];
   if (!token) res.sendStatus(401);
 
